@@ -10,7 +10,14 @@
 <textarea rows="7" id="input" oninput="change()" placeholder="text" style="font-size: 1.5rem; width:30%">ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ</textarea>
 <textarea rows="11" id="styleInput" oninput="styleEdit()" placeholder="stylesheet" style="width:60%">
 @import url(https://victorlee.github.io/mongol-fonts/stylesheet.css);
-.loop span {font-size: 2.5rem; font-family: onon sonin sans;}
+.loop span {font-size: 2.5rem; font-family: Menk Qagan Tig;}
+.a {color: #822;}
+.e {color: #288;}
+.i {color: #282;}
+.q {color: #828;}
+.v {color: #228;}
+.o {color: #882;}
+.u {color: #888;}
 </textarea>
 <hr>
 <div class="loop" id="loop"></div>
@@ -31,13 +38,13 @@ $('.loop').each(function (index) {
 var x = document.getElementsByClassName('span');
 var i;
 for (i = 0; i < x.length; i++) {
-if (x[i].innerHTML == 'ᠠ') {x[i].style.color = '#822';}
-if (x[i].innerHTML == 'ᠡ') {x[i].style.color = '#288';}
-if (x[i].innerHTML == 'ᠢ') {x[i].style.color = '#282';}
-if (x[i].innerHTML == 'ᠣ') {x[i].style.color = '#828';}
-if (x[i].innerHTML == 'ᠤ') {x[i].style.color = '#228';}
-if (x[i].innerHTML == 'ᠥ') {x[i].style.color = '#882';}
-if (x[i].innerHTML == 'ᠦ') {x[i].style.color = '#888';}
+if (x[i].innerHTML == 'ᠠ') {x[i].classList.add("a");}
+if (x[i].innerHTML == 'ᠡ') {x[i].classList.add("e");}
+if (x[i].innerHTML == 'ᠢ') {x[i].classList.add("i");}
+if (x[i].innerHTML == 'ᠣ') {x[i].classList.add("q");}
+if (x[i].innerHTML == 'ᠤ') {x[i].classList.add("v");}
+if (x[i].innerHTML == 'ᠥ') {x[i].classList.add("o");}
+if (x[i].innerHTML == 'ᠦ') {x[i].classList.add("u");}
 }
 }
 function styleEdit() {
