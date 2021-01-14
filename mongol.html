@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Color divider - Mongolian script</title>
+<style>
+</style>
+</head>
+<body>
+<h1 style="font-family: sans-serif;">Color divider - Mongolian script</h1>
+<textarea rows="7" id="input" oninput="change()" placeholder="text" style="font-size: 1.5rem; width:30%">ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ</textarea>
+<textarea rows="11" id="styleInput" oninput="styleEdit()" placeholder="stylesheet" style="width:60%">
+@import url(https://victorlee.github.io/fonts/stylesheet.css);
+.loop span {font-size: 2.5rem; font-family: onon sonin sans;}
+</textarea>
+<hr>
+<div class="loop" id="loop"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+function change() {
+var txta = document.getElementById('input').value;
+document.getElementById('loop').innerHTML = txta;
+$('.loop').each(function (index) {
+    var characters = $(this).text().split("");
+    $this = $(this);
+    $this.empty();
+    $.each(characters, function (i, el) {
+    $this.append("<span class='span'>" + el + "</span>");
+    });
+});
+var x = document.getElementsByClassName('span');
+var i;
+for (i = 0; i < x.length; i++) {
+if (x[i].innerHTML == 'ᠠ') {x[i].style.color = 'red';}
+if (x[i].innerHTML == 'ᠡ') {x[i].style.color = 'orange';}
+if (x[i].innerHTML == 'ᠢ') {x[i].style.color = 'yellow';}
+if (x[i].innerHTML == 'ᠣ') {x[i].style.color = 'green';}
+if (x[i].innerHTML == 'ᠤ') {x[i].style.color = 'blue';}
+if (x[i].innerHTML == 'ᠥ') {x[i].style.color = 'purple';}
+if (x[i].innerHTML == 'ᠦ') {x[i].style.color = 'black';}
+}
+}
+function styleEdit() {
+  document.getElementsByTagName("style")[0].innerHTML = document.getElementById('styleInput').value;
+}
+window.onload = change()
+window.onload = styleEdit()
+</script>
+</body>
+</html>
