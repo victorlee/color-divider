@@ -3,13 +3,6 @@
 <head>
 <title>Color divider</title>
 <style>
-div, .loop span {font-size: 2.5rem; font-family: sans-serif;}
-.loop span:nth-child(6n+1) {color: #822;}
-.loop span:nth-child(6n+2) {color: #288;}
-.loop span:nth-child(6n+3) {color: #282;}
-.loop span:nth-child(6n+4) {color: #828;}
-.loop span:nth-child(6n+5) {color: #228;}
-.loop span:nth-child(6n+0) {color: #882;}
 </style>
 </head>
 <body>
@@ -41,10 +34,11 @@ $('.loop').each(function (index) {
     });
 });
 }
-window.onload = change()
 function styleEdit() {
   document.getElementsByTagName("style")[0].innerHTML = document.getElementById('styleInput').value;
 }
+window.onload = change()
+window.styleEdit = change()
 </script>
 </body>
 </html>
