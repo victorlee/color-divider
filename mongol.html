@@ -33,10 +33,10 @@ $('.loop').each(function (index) {
     $this = $(this);
     $this.empty();
     $.each(characters, function (i, el) {
-    $this.append("<span class='span'>" + el + "</span>");
+    $this.append("<span>" + el + "</span>");
     });
 });
-var x = document.getElementsByClassName('span');
+var x = document.getElementsByTagName('span');
 var i;
 for (i = 0; i < x.length; i++) {
 if (x[i].innerHTML == 'ᠠ') {x[i].classList.add("a");}
